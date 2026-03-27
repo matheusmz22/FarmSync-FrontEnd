@@ -1,5 +1,25 @@
 # FarmSync Frontend
 
+## Project Context
+
+This project was developed as part of a **Software Engineering course (CS-250)**.
+
+FarmSync is a team-based project where different components were developed collaboratively:
+- Frontend (this repository)
+- Backend
+- AI prediction models
+
+👉 This repository contains **my frontend implementation**, focused on the **Farmer-side experience**.
+
+The original full project repository can be found here:  
+🔗 https://github.com/jan9601/CS-250-Project
+
+The project follows a **handoff model**, meaning:
+- Our team delivered a working MVP
+- Another team will continue development from this point
+
+---
+
 ## Overview
 
 This frontend is the Farmer-side implementation of **FarmSync**, a web application designed to help local farmers manage crops, view marketplace listings, and monitor harvest-related insights through a dashboard.
@@ -13,6 +33,24 @@ At the moment, the frontend includes:
 - A **Marketplace** page with card-based listing UI and listing detail modal
 - Reusable UI primitives such as **Button**, **Modal**, **Filter**, **Sort**, **Pagination**, and form components
 - Local mock prediction behavior while the real AI/backend pipeline is not yet connected
+
+---
+
+## My Contribution
+
+I was responsible for designing and implementing the **entire Farmer-side frontend**, including:
+
+- Dashboard (statistics, charts, upcoming harvests)
+- Crops management system (full CRUD)
+- Marketplace UI (card-based listings + modal preview)
+- Filtering, sorting, and pagination
+- Reusable UI component system
+- Mock data layer and prediction integration
+
+The frontend was structured to be:
+- scalable
+- reusable
+- easy to hand off to another development team
 
 ---
 
@@ -40,6 +78,18 @@ At the moment, the frontend includes:
 
 ---
 
+## Design Philosophy
+
+The frontend was built with the following priorities:
+
+- **Clarity** – Farmers should quickly understand crop data and upcoming harvests
+- **Usability** – Core actions should be intuitive and fast
+- **Reusability** – Components are shared across features
+- **Scalability** – Feature-based architecture allows future extension
+- **Handoff readiness** – Code is structured and documented for continuation
+
+---
+
 ## Tech Stack
 
 This frontend uses:
@@ -59,6 +109,11 @@ This frontend uses:
   - `Intl.DateTimeFormat`
 
 > Exact dependency versions should be checked in `package.json`.
+
+## Live Demo
+
+Frontend deployed on Vercel:  
+🔗 (https://farmsyncui.vercel.app/dashboard)
 
 ---
 
@@ -654,7 +709,7 @@ Currently used to filter crops by status.
 ### Sort
 Currently used for fields such as:
 - harvest date
--price
+- price
 - quantity
 - confidence score
 
@@ -745,6 +800,19 @@ Testing has mostly been manual so far.
 
 ---
 
+## Future Improvements
+
+The following features are planned for future development:
+
+- Backend API integration (replace localStorage and mock services)
+- Buyer/customer flow (cart, checkout, interaction with farmers)
+- Role-based UI rendering
+- Improved responsive design for mobile and tablet
+- Automated frontend testing
+- Enhanced chart interactivity and analytics
+
+---
+
 ## How to Run the Frontend
 ### Install dependencies
 `npm install`
@@ -782,3 +850,29 @@ Recommended manual test flow:
 - Refresh page to confirm persistence
 
 ---
+
+## Handoff Notes
+
+This frontend was designed to be continued by another development team.
+
+Recommended next steps:
+
+1. **Integrate backend APIs**
+   - Replace `cropsApi.js` with real API endpoints
+   - Keep React Query structure
+
+2. **Replace mock prediction logic**
+   - Move prediction logic from `mockPrediction.js` to backend
+
+3. **Implement customer flow**
+   - Add cart and purchasing system
+   - Extend marketplace functionality
+
+4. **Add role-based UI behavior**
+   - Different views for Farmer and Customer
+
+5. **Improve responsiveness**
+   - Adapt layouts for smaller screens
+
+Important note:
+Do NOT rewrite existing UI components. Extend and reuse the current structure.
