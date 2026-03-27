@@ -113,7 +113,7 @@ This frontend uses:
 ## Live Demo
 
 Frontend deployed on Vercel:  
-🔗 (https://farmsyncui.vercel.app/dashboard)
+🔗 https://farmsyncui.vercel.app
 
 ---
 
